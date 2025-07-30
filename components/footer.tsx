@@ -1,5 +1,6 @@
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Github, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Github } from "lucide-react"
 
 export function Footer() {
   return (
@@ -15,8 +16,8 @@ export function Footer() {
               MASQ Tech
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Cutting-edge technology solutions provider for modern businesses. Transforming ideas into digital reality
-              with innovation and excellence.
+              MASQ Tech is a results-driven digital agency specializing in performance marketing and creative solutions.
+              We help brands scale through data-backed strategies and compelling content.
             </p>
 
             {/* Social Media Icons */}
@@ -52,34 +53,49 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Our Services */}
           <div>
-            <h4 className="font-semibold mb-6 text-lg text-white">Services</h4>
+            <h4 className="font-semibold mb-6 text-lg text-white">Our Services</h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <Link href="/services/custom-development" className="hover:text-cyan-400 transition-colors">
-                  Custom Development
+                <Link href="/services/ecommerce" className="hover:text-cyan-400 transition-colors">
+                  E-Commerce Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/services/cloud-solutions" className="hover:text-cyan-400 transition-colors">
-                  Cloud Solutions
+                <Link href="/services/web-development" className="hover:text-cyan-400 transition-colors">
+                  Website Development
                 </Link>
               </li>
               <li>
-                <Link href="/services/ai-ml" className="hover:text-cyan-400 transition-colors">
-                  AI & Machine Learning
+                <Link href="/services/data-analyst" className="hover:text-cyan-400 transition-colors">
+                  Data Analyst
                 </Link>
               </li>
               <li>
-                <Link href="/services/cybersecurity" className="hover:text-cyan-400 transition-colors">
-                  Cybersecurity
+                <Link href="/services/android-developer" className="hover:text-cyan-400 transition-colors">
+                  Android Developer
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/digital-marketing" className="hover:text-cyan-400 transition-colors">
+                  Digital Marketing
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/uiux-designer" className="hover:text-cyan-400 transition-colors">
+                  UI/UX Designer
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/database-administrator" className="hover:text-cyan-400 transition-colors">
+                  Database Administrator
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company Info */}
           <div>
             <h4 className="font-semibold mb-6 text-lg text-white">Company</h4>
             <ul className="space-y-3 text-gray-400">
@@ -103,44 +119,63 @@ export function Footer() {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link href="/contact" className="hover:text-green-400 transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" className="hover:text-green-400 transition-colors">
+                  Portfolio
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Newsletter & Contact */}
           <div>
-            <h4 className="font-semibold mb-6 text-lg text-white">Contact Info</h4>
-            <div className="space-y-4 text-gray-400">
-              <div className="flex items-start">
-                <Mail className="h-5 w-5 mr-3 mt-0.5 text-cyan-400" />
-                <div>
-                  <a href="mailto:masqtech04@gmail.com" className="hover:text-cyan-400 transition-colors">
-                    masqtech04@gmail.com
-                  </a>
-                </div>
+            <h4 className="font-semibold mb-6 text-lg text-white">Subscribe newsletter</h4>
+            <p className="text-gray-400 mb-4 text-sm">Subscribe to our Newsletter & Event Right Now to be Updated</p>
+            <div className="mb-6">
+              <Button
+                asChild
+                className="bg-gradient-to-r from-cyan-600 to-green-600 hover:from-cyan-700 hover:to-green-700 w-full"
+              >
+                <Link href="/contact">Sign Up</Link>
+              </Button>
+            </div>
+
+            <div className="space-y-3 text-sm">
+              <div>
+                <h5 className="font-semibold text-white mb-2">Office Address</h5>
+                <p className="text-gray-400">I10/2 Islamabad, Pakistan</p>
               </div>
-              <div className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 mt-0.5 text-green-400" />
+              <div>
+                <h5 className="font-semibold text-white mb-2">Email Us</h5>
+                <a href="mailto:masqtech04@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                  masqtech04@gmail.com
+                </a>
+              </div>
+              <div>
+                <h5 className="font-semibold text-white mb-2">Call Anytime</h5>
                 <div className="space-y-1">
                   <div>
-                    <a href="tel:+923495606710" className="hover:text-green-400 transition-colors">
+                    <a href="tel:+923495606710" className="text-gray-400 hover:text-cyan-400 transition-colors">
                       +92 349 560 6710
                     </a>
                   </div>
                   <div>
-                    <a href="tel:+923320960621" className="hover:text-green-400 transition-colors">
+                    <a href="tel:+923320960621" className="text-gray-400 hover:text-cyan-400 transition-colors">
                       +92 332 096 0621
                     </a>
                   </div>
                 </div>
               </div>
-              <div className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 mt-0.5 text-purple-400" />
-                <div>
-                  <p className="text-sm">
-                    123 Digital Avenue, Suite 100
-                    <br />
-                    Tech City, TC 12345
-                  </p>
+              <div>
+                <h5 className="font-semibold text-white mb-2">Office Hour</h5>
+                <div className="text-gray-400">
+                  <div>Mon-Sat: 9AM-6PM</div>
+                  <div>Second shift: 9PM-6AM</div>
                 </div>
               </div>
             </div>
@@ -148,21 +183,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; 2024 MASQ Tech. All rights reserved. Built with ❤️ for the future.
-          </p>
-          <div className="flex space-x-6 text-sm text-gray-400">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap" className="hover:text-white transition-colors">
-              Sitemap
-            </Link>
-          </div>
+        <div className="border-t border-gray-800 pt-8 text-center">
+          <p className="text-gray-400 text-sm">&copy; 2025 MASQ Tech. All rights reserved. Built with the future.</p>
         </div>
       </div>
     </footer>

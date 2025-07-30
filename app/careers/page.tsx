@@ -16,29 +16,29 @@ export default function CareersPage() {
       requirements: ["5+ years experience", "React/Node.js", "TypeScript", "Cloud platforms"],
     },
     {
-      title: "AI/ML Engineer",
+      title: "Data Analyst",
       department: "Data Science",
       location: "Remote / On-site",
       type: "Full-time",
-      salary: "$70,000 - $90,000",
-      description: "Develop intelligent solutions and machine learning models for our clients.",
-      requirements: ["Python/TensorFlow", "Machine Learning", "Data Science", "3+ years experience"],
+      salary: "$50,000 - $70,000",
+      description: "Transform business data into actionable insights and create comprehensive reports.",
+      requirements: ["Python/SQL", "Data Visualization", "Statistics", "3+ years experience"],
     },
     {
-      title: "DevOps Engineer",
-      department: "Infrastructure",
+      title: "Android Developer",
+      department: "Mobile Development",
       location: "Remote / On-site",
       type: "Full-time",
-      salary: "$65,000 - $85,000",
-      description: "Manage our cloud infrastructure and implement DevOps best practices.",
-      requirements: ["AWS/Azure", "Docker/Kubernetes", "CI/CD", "Linux administration"],
+      salary: "$55,000 - $75,000",
+      description: "Develop native Android applications with modern features and user-friendly interfaces.",
+      requirements: ["Java/Kotlin", "Android SDK", "Material Design", "3+ years experience"],
     },
     {
       title: "UI/UX Designer",
       department: "Design",
       location: "Remote / On-site",
       type: "Full-time",
-      salary: "$50,000 - $70,000",
+      salary: "$45,000 - $65,000",
       description: "Create beautiful and intuitive user experiences for our applications.",
       requirements: ["Figma/Adobe Creative Suite", "User Research", "Prototyping", "3+ years experience"],
     },
@@ -160,7 +160,13 @@ export default function CareersPage() {
                         asChild
                         className="mt-4 md:mt-0 bg-gradient-to-r from-cyan-600 to-green-600 hover:from-cyan-700 hover:to-green-700"
                       >
-                        <Link href="/contact">Apply Now</Link>
+                        <a
+                          href="https://docs.google.com/forms/d/e/1FAIpQLSdb2a_wrX48T9gLGhhBmEgCYMm_3CgeS44wubncBNTnvgl8KA/viewform"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Apply Now
+                        </a>
                       </Button>
                     </div>
                   </CardHeader>
@@ -202,7 +208,7 @@ export default function CareersPage() {
               {
                 step: "01",
                 title: "Apply Online",
-                description: "Submit your application through our contact form with your resume and cover letter.",
+                description: "Submit your application through our Google Form with your resume and cover letter.",
               },
               {
                 step: "02",
@@ -247,7 +253,13 @@ export default function CareersPage() {
               size="lg"
               className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-full"
             >
-              <Link href="/contact">Send Us Your Resume</Link>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdb2a_wrX48T9gLGhhBmEgCYMm_3CgeS44wubncBNTnvgl8KA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Send Us Your Resume
+              </a>
             </Button>
           </ScrollAnimatedSection>
         </div>

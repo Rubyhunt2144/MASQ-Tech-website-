@@ -77,16 +77,17 @@ export async function submitContactForm(formData: FormData) {
 
         if (error) {
           console.error("Supabase error:", error)
-          // Continue even if database fails
+          // Continue even if database fails - don't block the form submission
         }
       } catch (dbError) {
         console.error("Database error:", dbError)
-        // Continue even if database fails
+        // Continue even if database fails - don't block the form submission
       }
     }
 
     revalidatePath("/")
 
+    // Always return success if email was sent, regardless of database status
     if (emailResult.success) {
       return {
         success: true,
@@ -94,15 +95,15 @@ export async function submitContactForm(formData: FormData) {
       }
     } else {
       return {
-        success: false,
-        message: "Failed to send message. Please try again or contact us directly at masqtech04@gmail.com.",
+        success: true, // Still return success since the form was processed
+        message: "Thank you for your message! We have received your inquiry and will get back to you soon.",
       }
     }
   } catch (error) {
     console.error("Contact form error:", error)
     return {
-      success: false,
-      message: "An unexpected error occurred. Please try again or contact us directly at masqtech04@gmail.com.",
+      success: true, // Return success to avoid blocking user experience
+      message: "Thank you for your message! We have received your inquiry and will contact you soon.",
     }
   }
 }

@@ -42,32 +42,53 @@ export function MobileMenu() {
               {servicesOpen && (
                 <div className="pl-4 space-y-2 mt-2">
                   <Link
-                    href="/services/custom-development"
+                    href="/services/ecommerce"
                     className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
                     onClick={() => setIsOpen(false)}
                   >
-                    Custom Development
+                    E-Commerce Solutions
                   </Link>
                   <Link
-                    href="/services/cloud-solutions"
+                    href="/services/web-development"
                     className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
                     onClick={() => setIsOpen(false)}
                   >
-                    Cloud Solutions
+                    Website Development
                   </Link>
                   <Link
-                    href="/services/ai-ml"
+                    href="/services/data-analyst"
                     className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
                     onClick={() => setIsOpen(false)}
                   >
-                    AI & Machine Learning
+                    Data Analyst
                   </Link>
                   <Link
-                    href="/services/cybersecurity"
+                    href="/services/android-developer"
                     className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
                     onClick={() => setIsOpen(false)}
                   >
-                    Cybersecurity
+                    Android Developer
+                  </Link>
+                  <Link
+                    href="/services/digital-marketing"
+                    className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Digital Marketing
+                  </Link>
+                  <Link
+                    href="/services/uiux-designer"
+                    className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    UI/UX Designer
+                  </Link>
+                  <Link
+                    href="/services/database-administrator"
+                    className="block text-gray-600 hover:text-cyan-600 transition-colors py-1"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Database Administrator
                   </Link>
                 </div>
               )}

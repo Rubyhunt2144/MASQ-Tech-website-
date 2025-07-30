@@ -7,40 +7,40 @@ export default function TeamPage() {
   const teamMembers = [
     {
       name: "Saif Ali",
-      role: "Chief Executive Officer & Lead Developer",
+      role: "Lead Developer & Digital Marketer",
       image: "/images/team/saif-ali.png",
-      bio: "Saif leads our development team with over 5 years of experience in full-stack development and project management. He specializes in modern web technologies and cloud architecture.",
-      skills: ["React", "Node.js", "AWS", "Project Management"],
+      bio: "Expert in full-stack development and digital marketing strategies. Leads our development team with 3+ years of experience in creating scalable web applications and driving online growth through innovative marketing campaigns. Specializes in React, Node.js, and performance marketing across multiple digital platforms.",
+      skills: ["React", "Node.js", "Digital Marketing", "SEO", "Google Ads", "Social Media Marketing"],
       linkedin: "https://linkedin.com/in/saif-ali",
       github: "https://github.com/saif-ali",
       email: "saif@masqtech04.com",
     },
     {
       name: "Ghulam Qadir",
-      role: "Senior Full-Stack Developer",
+      role: "Android & Web Developer",
       image: "/images/team/ghulam-qadir.png",
-      bio: "Ghulam is our full-stack expert with extensive experience in both frontend and backend development. He's passionate about creating scalable and efficient solutions.",
-      skills: ["JavaScript", "Python", "MongoDB", "Docker"],
+      bio: "Specialized in Android app development and responsive web design. Creates user-friendly mobile applications and modern websites with focus on performance, user experience, and cross-platform compatibility. Expert in native Android development and modern web technologies.",
+      skills: ["Android Development", "Java", "Kotlin", "JavaScript", "React", "Responsive Design"],
       linkedin: "https://linkedin.com/in/ghulam-qadir",
       github: "https://github.com/ghulam-qadir",
       email: "qadir@masqtech04.com",
     },
     {
       name: "Mohsin Shahzad",
-      role: "AI/ML Engineer & Data Scientist",
+      role: "Data Analyst",
       image: "/images/team/mohsin-shahzad.png",
-      bio: "Mohsin brings cutting-edge AI and machine learning expertise to our team. He specializes in developing intelligent solutions and data-driven applications.",
-      skills: ["Python", "TensorFlow", "Data Science", "Machine Learning"],
+      bio: "Transforms complex data into actionable business insights. Expert in data visualization, statistical analysis, and business intelligence to help clients make informed decisions and optimize their operations. Specializes in Python, SQL, and advanced analytics tools.",
+      skills: ["Python", "SQL", "Data Visualization", "Power BI", "Excel", "Statistical Analysis"],
       linkedin: "https://linkedin.com/in/mohsin-shahzad",
       github: "https://github.com/mohsin-shahzad",
       email: "mohsin@masqtech04.com",
     },
     {
       name: "Ahzaz Ahmed",
-      role: "Cybersecurity Specialist & DevOps Engineer",
+      role: "Software Developer & IoT Expert",
       image: "/images/team/ahzaz-ahmed.png",
-      bio: "Ahzaz ensures our solutions are secure and well-deployed. He specializes in cybersecurity, DevOps practices, and cloud infrastructure management.",
-      skills: ["Cybersecurity", "DevOps", "Kubernetes", "Security Auditing"],
+      bio: "Develops innovative software solutions and IoT applications. Specializes in creating smart systems that connect devices and automate business processes for enhanced efficiency and productivity. Expert in embedded systems, cloud integration, and smart device development.",
+      skills: ["IoT Development", "C++", "Python", "Arduino", "Raspberry Pi", "Cloud Integration"],
       linkedin: "https://linkedin.com/in/ahzaz-ahmed",
       github: "https://github.com/ahzaz-ahmed",
       email: "ahzaz@masqtech04.com",
@@ -73,7 +73,7 @@ export default function TeamPage() {
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative">
-                      <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                      <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
                         <img
                           src={member.image || "/placeholder.svg"}
                           alt={member.name}

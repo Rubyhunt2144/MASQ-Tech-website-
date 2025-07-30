@@ -70,10 +70,10 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: 200, suffix: "+", label: "Projects Completed", icon: <Award className="h-8 w-8" /> },
+              { number: 50, suffix: "+", label: "Projects Completed", icon: <Award className="h-8 w-8" /> },
               { number: 98, suffix: "%", label: "Client Satisfaction", icon: <Users className="h-8 w-8" /> },
-              { number: 5, suffix: "+", label: "Years Experience", icon: <Zap className="h-8 w-8" /> },
-              { number: 50, suffix: "+", label: "Happy Clients", icon: <Globe className="h-8 w-8" /> },
+              { number: 2, suffix: "+", label: "Years Experience", icon: <Zap className="h-8 w-8" /> },
+              { number: 15, suffix: "+", label: "Happy Clients", icon: <Globe className="h-8 w-8" /> },
             ].map((stat, index) => (
               <ScrollAnimatedSection key={index}>
                 <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-center p-8 hover:bg-white/20 transition-all duration-300">
