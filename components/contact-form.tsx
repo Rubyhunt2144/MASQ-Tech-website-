@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { submitContactForm } from "@/app/actions/contact"
-import { Loader2, CheckCircle, AlertCircle, Mail, Phone } from "lucide-react"
+import { Loader2, CheckCircle, AlertCircle } from "lucide-react"
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -104,41 +104,6 @@ export function ContactForm() {
           </form>
         </CardContent>
       </Card>
-
-      {/* Direct Contact Options */}
-      <div className="grid md:grid-cols-2 gap-4">
-        <Card className="border-0 bg-gradient-to-r from-cyan-50 to-cyan-100 hover:shadow-lg transition-all duration-300">
-          <CardContent className="p-4 text-center">
-            <Mail className="h-8 w-8 text-cyan-600 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900 mb-1">Email Us Directly</h3>
-            <a
-              href="mailto:masqtech04@gmail.com"
-              className="text-cyan-600 hover:text-cyan-700 transition-colors text-sm"
-            >
-              masqtech04@gmail.com
-            </a>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-gradient-to-r from-green-50 to-green-100 hover:shadow-lg transition-all duration-300">
-          <CardContent className="p-4 text-center">
-            <Phone className="h-8 w-8 text-green-600 mx-auto mb-2" />
-            <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
-            <div className="text-green-600 text-sm space-y-1">
-              <div>
-                <a href="tel:+923495606710" className="hover:text-green-700 transition-colors">
-                  +92 349 560 6710
-                </a>
-              </div>
-              <div>
-                <a href="tel:+923320960621" className="hover:text-green-700 transition-colors">
-                  +92 332 096 0621
-                </a>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
     </div>
   )
 }

@@ -4,6 +4,41 @@ import { ScrollAnimatedSection } from "@/components/scroll-animations"
 import { AnimatedCounter } from "@/components/animated-counter"
 
 export default function AboutPage() {
+  const teamMembersAbout = [
+    {
+      name: "Saif Ali",
+      role: "Lead Developer & Digital Marketer",
+      image: "/images/team/saif-ali.png", // Corrected image path
+      description:
+        "Expert in full-stack development and digital marketing strategies. Leads our development team with 3+ years of experience in creating scalable web applications and driving online growth through innovative marketing campaigns.",
+      expertise: ["React", "Node.js", "Digital Marketing", "SEO", "Google Ads", "Social Media"],
+    },
+    {
+      name: "Ghulam Qadir",
+      role: "Android & Web Developer",
+      image: "/images/team/ghulam-qadir.png", // Corrected image path
+      description:
+        "Specialized in Android app development and responsive web design. Creates user-friendly mobile applications and modern websites with focus on performance, user experience, and cross-platform compatibility. Expert in native Android development and modern web technologies.",
+      expertise: ["Android", "Kotlin", "Java", "React", "Next.js", "Responsive Design"],
+    },
+    {
+      name: "Mohsin Shahzad",
+      role: "Data Analyst",
+      image: "/images/team/mohsin-shahzad.png", // This was already correct
+      description:
+        "Transforms complex data into actionable business insights. Expert in data visualization, statistical analysis, and business intelligence to help clients make informed decisions and optimize their operations. Specializes in Python, SQL, and advanced analytics tools.",
+      expertise: ["Python", "SQL", "Data Visualization", "Power BI", "Excel", "Statistical Analysis"],
+    },
+    {
+      name: "Ahzaz Ahmed",
+      role: "Software Developer & IoT Expert",
+      image: "/images/team/ahzaz-ahmed.png", // Corrected image path
+      description:
+        "Develops innovative software solutions and IoT applications. Specializes in creating smart systems that connect devices and automate business processes for enhanced efficiency and productivity. Expert in embedded systems, cloud integration, and smart device development.",
+      expertise: ["IoT Development", "C++", "Python", "Arduino", "Raspberry Pi", "Cloud Integration"],
+    },
+  ]
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -192,7 +227,7 @@ export default function AboutPage() {
                     <div className="w-32 h-32 bg-gradient-to-br from-cyan-600 to-green-600 rounded-full flex items-center justify-center mb-6 mx-auto shadow-2xl">
                       <Award className="h-16 w-16 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Excellence Driven</h3>
+                    <h3 className="2xl font-bold text-gray-900 mb-2">Excellence Driven</h3>
                     <p className="text-gray-600 max-w-xs">
                       Committed to delivering outstanding results that exceed expectations
                     </p>
@@ -200,6 +235,56 @@ export default function AboutPage() {
                 </div>
               </div>
             </ScrollAnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section for About Page */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimatedSection className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our talented team is dedicated to bringing your vision to life with passion and precision.
+            </p>
+          </ScrollAnimatedSection>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembersAbout.map((member, index) => (
+              <ScrollAnimatedSection key={index}>
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="relative w-40 h-40 mx-auto mt-6 mb-4 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+                      <img
+                        src={member.image || "/placeholder.svg"}
+                        alt={member.name}
+                        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+
+                    <div className="p-4 text-center">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                      <p className="text-cyan-600 font-semibold mb-3">{member.role}</p>
+                      <p className="text-gray-600 mb-4 text-sm leading-relaxed">{member.description}</p>
+
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-gray-900 text-sm">Expertise:</h4>
+                        <div className="flex flex-wrap justify-center gap-2">
+                          {member.expertise.map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className="px-3 py-1 bg-gradient-to-r from-cyan-100 to-green-100 text-cyan-700 text-xs font-medium rounded-full"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimatedSection>
+            ))}
           </div>
         </div>
       </section>

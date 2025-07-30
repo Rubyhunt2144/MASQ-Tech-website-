@@ -154,7 +154,7 @@ git push
 \`\`\`
 3. Vercel automatically redeploys (2-3 minutes)
 
-## 🌐 How to Share Your Website
+## ���� How to Share Your Website
 
 ### Your Live Website URL
 - **Format**: `https://your-project-name.vercel.app`

@@ -19,6 +19,29 @@ import { ContactForm } from "@/components/contact-form"
 import { AnimatedCounter } from "@/components/animated-counter"
 
 export default function HomePage() {
+  const teamMembers = [
+    {
+      name: "Saif Ali",
+      role: "Lead Developer & Digital Marketer",
+      image: "/images/team/saif-ali.png",
+    },
+    {
+      name: "Ghulam Qadir",
+      role: "Android & Web Developer",
+      image: "/images/team/ghulam-qadir.png",
+    },
+    {
+      name: "Mohsin Shahzad",
+      role: "Data Analyst",
+      image: "/images/team/mohsin-shahzad.png",
+    },
+    {
+      name: "Ahzaz Ahmed",
+      role: "Software Developer & IoT Expert",
+      image: "/images/team/ahzaz-ahmed.png",
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -314,51 +337,21 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Saif Ali",
-                role: "Lead Developer & Digital Marketer",
-                image: "/images/team/saif-ali.png",
-                description:
-                  "Expert in full-stack development and digital marketing strategies. Leads our development team with 3+ years of experience in creating scalable web applications and driving online growth through innovative marketing campaigns.",
-              },
-              {
-                name: "Ghulam Qadir",
-                role: "Android & Web Developer",
-                image: "/images/team/ghulam-qadir.png",
-                description:
-                  "Specialized in Android app development and responsive web design. Creates user-friendly mobile applications and modern websites with focus on performance, user experience, and cross-platform compatibility.",
-              },
-              {
-                name: "Mohsin Shahzad",
-                role: "Data Analyst",
-                image: "/images/team/mohsin-shahzad.png",
-                description:
-                  "Transforms complex data into actionable business insights. Expert in data visualization, statistical analysis, and business intelligence to help clients make informed decisions and optimize their operations.",
-              },
-              {
-                name: "Ahzaz Ahmed",
-                role: "Software Developer & IoT Expert",
-                image: "/images/team/ahzaz-ahmed.png",
-                description:
-                  "Develops innovative software solutions and IoT applications. Specializes in creating smart systems that connect devices and automate business processes for enhanced efficiency and productivity.",
-              },
-            ].map((member, index) => (
+            {teamMembers.map((member, index) => (
               <Card
                 key={index}
                 className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
               >
-                <div className="aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden">
+                <div className="relative aspect-[1/1] w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
                   <img
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-4 text-center">
+                <CardContent className="p-4 pt-0 text-center">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-cyan-600 font-semibold mb-2 text-sm">{member.role}</p>
-                  <p className="text-gray-600 text-xs leading-relaxed">{member.description}</p>
+                  <p className="text-cyan-600 font-semibold text-sm">{member.role}</p>
                 </CardContent>
               </Card>
             ))}
@@ -403,7 +396,7 @@ export default function HomePage() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-full"
+              className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold px-8 py-4 rounded-full animate-pulse-slow"
             >
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdb2a_wrX48T9gLGhhBmEgCYMm_3CgeS44wubncBNTnvgl8KA/viewform"

@@ -3,8 +3,12 @@ import { ContactForm } from "@/components/contact-form"
 import { NewsletterSignup } from "@/components/newsletter-signup"
 import { ScrollAnimatedSection } from "@/components/scroll-animations"
 import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link" // Import Link for the map link
 
 export default function ContactPage() {
+  const mapCoordinates = "33.64704,73.03645"
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapCoordinates}`
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -77,24 +81,30 @@ export default function ContactPage() {
                           <div>
                             <h3 className="font-semibold text-gray-900 mb-2">{contact.title}</h3>
                             <div className="space-y-1">
-                              {contact.content.map((item, itemIndex) => (
-                                <div key={itemIndex} className="text-gray-600">
-                                  {contact.title === "Call Us" ? (
-                                    <a
-                                      href={`tel:${item.replace(/\s/g, "")}`}
-                                      className="hover:text-cyan-600 transition-colors"
-                                    >
-                                      {item}
-                                    </a>
-                                  ) : contact.title === "Email Us" ? (
-                                    <a href={`mailto:${item}`} className="hover:text-green-600 transition-colors">
-                                      {item}
-                                    </a>
-                                  ) : (
-                                    item
-                                  )}
-                                </div>
-                              ))}
+                              {contact.title === "Call Us"
+                                ? contact.content.map((item, itemIndex) => (
+                                    <div key={itemIndex} className="text-gray-600">
+                                      <a
+                                        href={`tel:${item.replace(/\s/g, "")}`}
+                                        className="hover:text-cyan-600 transition-colors"
+                                      >
+                                        {item}
+                                      </a>
+                                    </div>
+                                  ))
+                                : contact.title === "Email Us"
+                                  ? contact.content.map((item, itemIndex) => (
+                                      <div key={itemIndex} className="text-gray-600">
+                                        <a href={`mailto:${item}`} className="hover:text-green-600 transition-colors">
+                                          {item}
+                                        </a>
+                                      </div>
+                                    ))
+                                  : contact.content.map((item, itemIndex) => (
+                                      <div key={itemIndex} className="text-gray-600">
+                                        {item}
+                                      </div>
+                                    ))}
                             </div>
                           </div>
                         </div>
@@ -122,17 +132,29 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
+      {/* Map Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimatedSection>
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">Find Us Here</h3>
-                <p className="text-gray-500">Interactive map coming soon</p>
+            <Link href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl h-96 flex items-center justify-center overflow-hidden relative group">
+                <iframe
+                  src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.9170000000003!2d73.03426937500001!3d33.64704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDM4JzQ5LjMiTiA3M8KwMDInMTAuOSJF!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="MASQ Tech Location"
+                  className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-300"
+                ></iframe>
+                <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <MapPin className="h-16 w-16 text-white animate-bounce-slow" />
+                  <span className="sr-only">Click to open map</span>
+                </div>
               </div>
-            </div>
+            </Link>
           </ScrollAnimatedSection>
         </div>
       </section>
