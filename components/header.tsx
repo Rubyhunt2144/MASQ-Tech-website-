@@ -14,7 +14,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src="/images/masq-logo.png" alt="Logo" className="h-10" />
+            <img src="/images/masq-logo.png" alt="Logo" className="h-20 w-100" />
           </div>
 
           <div className="hidden lg:flex items-center space-x-8">

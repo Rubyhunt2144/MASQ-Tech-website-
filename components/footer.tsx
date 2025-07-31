@@ -23,28 +23,28 @@ export function Footer() {
             {/* Social Media Icons */}
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/masqtech"
+                href="https://www.facebook.com/share/19LQ6ByzKR/"
                 target="_blank"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all duration-300 transform hover:scale-110"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.instagram.com/masqtech"
+                href="https://www.instagram.com/masqtech.official/"
                 target="_blank"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all duration-300 transform hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.linkedin.com/company/masqtech"
+                href="https://www.linkedin.com/masqtech.official"
                 target="_blank"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 transform hover:scale-110"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
               <Link
-                href="https://github.com/masqtech"
+                href="https://github.com/masqtech.official"
                 target="_blank"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-600 transition-all duration-300 transform hover:scale-110"
               >
@@ -174,8 +174,8 @@ export function Footer() {
               <div>
                 <h5 className="font-semibold text-white mb-2">Office Hour</h5>
                 <div className="text-gray-400">
-                  <div>Mon-Sat: 9AM-6PM</div>
-                  <div>Second shift: 9PM-6AM</div>
+                  <div>Operating Hours: Monday to Saturday, 9:00 AM – 6:00 PM</div>
+                  <div>Second Shift: Monday to Saturday, 9:00 PM – 6:00 AM</div>
                 </div>
               </div>
             </div>

@@ -8,12 +8,12 @@ export default function TeamPage() {
     {
       name: "Saif Ali",
       role: "Lead Developer & Digital Marketer",
-      image: "/images/team/saif-ali.png ",
+      image: "/images/team/saif-ali1.jpg ",
       bio: "Expert in full-stack development and digital marketing strategies. Leads our development team with 3+ years of experience in creating scalable web applications and driving online growth through innovative marketing campaigns. Specializes in React, Node.js, and performance marketing across multiple digital platforms.",
       skills: ["React", "Node.js", "Digital Marketing", "SEO", "Google Ads", "Social Media Marketing"],
       linkedin: "https://www.linkedin.com/in/mrsaifali/",
-      github: "https://github.com/saif-ali",
-      email: "saif@masqtech04.com",
+      github: "https://github.com/Mrsaifie",
+      email: "mrsaifie.512@gmail.com",
     },
     {
       name: "Ghulam Qadir",
