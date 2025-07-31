@@ -8,7 +8,7 @@ export default function TeamPage() {
     {
       name: "Saif Ali",
       role: "Lead Developer & Digital Marketer",
-      image: "/images/team/ahzaz-ahmed.png",
+      image: "/images/team/saif-ali.png ",
       bio: "Expert in full-stack development and digital marketing strategies. Leads our development team with 3+ years of experience in creating scalable web applications and driving online growth through innovative marketing campaigns. Specializes in React, Node.js, and performance marketing across multiple digital platforms.",
       skills: ["React", "Node.js", "Digital Marketing", "SEO", "Google Ads", "Social Media Marketing"],
       linkedin: "https://www.linkedin.com/in/mrsaifali/",
@@ -38,7 +38,7 @@ export default function TeamPage() {
     {
       name: "Ahzaz Ahmed",
       role: "Software Developer & IoT Expert",
-      image: "/images/team/saif-ali.png",
+      image: "/images/team/ahzaz-ahmed.png",
 
       bio: "Develops innovative software solutions and IoT applications. Specializes in creating smart systems that connect devices and automate business processes for enhanced efficiency and productivity. Expert in embedded systems, cloud integration, and smart device development.",
       skills: ["IoT Development", "C++", "Python", "Arduino", "Raspberry Pi", "Cloud Integration"],
